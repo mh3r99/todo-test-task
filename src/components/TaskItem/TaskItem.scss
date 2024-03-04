@@ -1,0 +1,60 @@
+@import '../../styles/variables.scss';
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &:active {
+    cursor: grab;
+  }
+  &:hover {
+    cursor: grab;
+    background-color: #f0f0f0;
+  }
+
+  &.droppable {
+    border: 2px dashed $primary-color;
+  }
+
+  input[type='checkbox'] {
+    margin-right: 10px;
+  }
+
+  .actions {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+  }
+
+  button {
+    background-color: $danger-color;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &.edit {
+      background-color: $secondary-color;
+    }
+
+    &.save {
+      background-color: $success-color;
+    }
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: #ccc;
+  }
+}
